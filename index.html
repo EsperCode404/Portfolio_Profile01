@@ -601,7 +601,8 @@ I enjoy developing intelligent applications, designing clean interfaces, and int
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="contactForm">
+                        <form id="contactForm" name="contact" method="POST" netlify>
+                            <input type="hidden" name="form-name" value="contact">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" required>
                                 <label for="name">Your Name</label>
