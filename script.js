@@ -402,30 +402,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Portfolio website initialized successfully! 🚀');
     }
 
-    // Contact form handling
+    // Contact form handling - Simplified for Netlify
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Simple validation
-            if (!data.name || !data.email || !data.subject || !data.message) {
-                showNotification('Please fill in all fields', 'error');
-                return;
-            }
-
-            // Simulate form submission (replace with actual API call)
-            console.log('Form submitted:', data);
-
-            // Show success message
+        contactForm.addEventListener('submit', function() {
+            // This will show after Netlify handles the form
             showNotification('Thank you for your message! I will get back to you soon.', 'success');
-
-            // Reset form
-            this.reset();
         });
     }
 
